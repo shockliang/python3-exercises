@@ -17,3 +17,19 @@ print('She say "Don\'t do that"')
 print("This costs " + str(6 + 5) + " dollars")
 
 print("I'm " + "Hello:Shock".split(":")[1])
+
+print(True)
+
+print(5 == 5)
+
+print(5 is 5)
+
+print(5 == 4)
+
+print(5 is not 5)
+
+print("This" is "This")
+
+print("True" is True)
+
+print("True" is str(True))
