@@ -13,3 +13,7 @@ print('Hello')
 print('She say "I want this"')
 
 print('She say "Don\'t do that"')
+
+print("This costs " + str(6 + 5) + " dollars")
+
+print("I'm " + "Hello:Shock".split(":")[1])
