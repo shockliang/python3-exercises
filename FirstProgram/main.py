@@ -33,3 +33,9 @@ print("This" is "This")
 print("True" is True)
 
 print("True" is str(True))
+
+print(["Movies", "Games", "Programming"][0])
+
+print({"name": "Shock", "age":35, "hobby":"Gunpla"}["name"])
+print({"name": "Shock", "age":35, "hobby":"Gunpla"}["age"])
+print({"name": "Shock", "age":35, "hobby":"Gunpla"}["hobby"])
