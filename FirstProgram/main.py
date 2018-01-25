@@ -36,6 +36,19 @@ print("True" is str(True))
 
 print(["Movies", "Games", "Programming"][0])
 
-print({"name": "Shock", "age":35, "hobby":"Gunpla"}["name"])
-print({"name": "Shock", "age":35, "hobby":"Gunpla"}["age"])
-print({"name": "Shock", "age":35, "hobby":"Gunpla"}["hobby"])
+print({"name": "Shock", "age": 35, "hobby": "Gunpla"}["name"])
+print({"name": "Shock", "age": 35, "hobby": "Gunpla"}["age"])
+print({"name": "Shock", "age": 35, "hobby": "Gunpla"}["hobby"])
+
+greeting = "Hello World"
+print(greeting)
+
+greeting = greeting.split(" ")[0]
+print(greeting)
+print(greeting + " Someone else")
+
+number = 1
+secondnumber = 2
+print(number * secondnumber + secondnumber * number)
+
+check = True
