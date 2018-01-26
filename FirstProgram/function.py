@@ -21,4 +21,15 @@ def print_people(*people):
     for person in people:
         print("This person is", person)
 
+
 print_people("Shock", "David", "Jack", "Kingsman")
+
+
+def do_math(num1, num2):
+    return num1 + num2
+
+
+result = do_math(5, 7)
+result2 = do_math(11, 12)
+
+print("First result", result, ", Second result", result2)
