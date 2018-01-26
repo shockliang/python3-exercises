@@ -14,4 +14,11 @@ def print_something(name="Someone", age="Unknow"):
 
 print_something(None, 27)
 
-print_something(age = 35, name = "Shock")
+print_something(age=35, name="Shock")
+
+
+def print_people(*people):
+    for person in people:
+        print("This person is", person)
+
+print_people("Shock", "David", "Jack", "Kingsman")
