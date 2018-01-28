@@ -1,5 +1,17 @@
 import random
 
+class Enemy:
+    attackLow = 60
+    attackHigh = 80
+
+    def getAttackPower(self):
+        print("Attack power range. Low:", self.attackLow, "High:",self.attackHigh)
+
+enemy1 = Enemy()
+enemy1.getAttackPower()
+
+enemy2 = Enemy()
+enemy2 = enemy2.getAttackPower()
 
 playerHp = 260
 
