@@ -1,18 +1,21 @@
 import random
 
 class Enemy:
-    attackLow = 60
-    attackHigh = 80
+
+    def __init__(self, attackLow, attackHigh):
+        self.attackLow = attackLow
+        self.attackHigh = attackHigh
 
     def getAttackPower(self):
         print("Attack power range. Low:", self.attackLow, "High:",self.attackHigh)
 
-enemy1 = Enemy()
+enemy1 = Enemy(60, 80)
 enemy1.getAttackPower()
 
-enemy2 = Enemy()
+enemy2 = Enemy(50, 100)
 enemy2 = enemy2.getAttackPower()
 
+'''
 playerHp = 260
 
 enemyAttackLow = 60
@@ -32,3 +35,4 @@ while playerHp > 0:
 
     print("You have low health. You've been teleported to the nearest inn.")
     break
+'''
