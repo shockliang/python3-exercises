@@ -23,6 +23,17 @@ class Person:
         self.defense = defense
         self.magic = magic
         self.actions = ["Attack", "Magic"]
-    
+
     def generate_damage(self):
         return random.randrange(self.attackLow, self.attackHigh)
+
+    def generate_spell_magic(self, i):
+        magicLow = self.magic[i]["dmg"] - 5
+        magicHigh = self.magic[i]["dmg"] + 5
+        return random.randrange(magicLow, magicHigh)
+
+    def take_damage(self, dmg):
+        self.hp -= dmg
+        if self.hp < 0:
+            self.hp = 0
+        return self.hp
