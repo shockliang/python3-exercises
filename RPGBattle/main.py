@@ -3,6 +3,18 @@ from classes.magic import Spell
 from classes.Inventory import Item
 
 
+print("\n\n")
+print("NAME                   HP                                   MP")
+print("                       _________________________             __________ ")
+print(bcolors.BOLD + "Valos:        460/460 |" + bcolors.OKGREEN +
+      "█████████████████████████"+bcolors.ENDC + "|    65/65  |" + bcolors.OKBLUE + "██████████"+bcolors.ENDC+"|")
+print("                       _________________________             __________ ")
+print("Valos:        460/460 |                         |    65/65  |          |")
+print("                       _________________________             __________ ")
+print("Valos:        460/460 |                         |    65/65  |          |")
+
+print("\n\n")
+
 # Create black magic
 fire = Spell("Fire", 10, 100, "black")
 thunder = Spell("Thunder", 10, 100, "black")
@@ -90,7 +102,7 @@ while running:
         if player.items[item_choice]["quantity"] == 0:
             print(bcolors.FAIL + "\n" + "None left..." + bcolors.ENDC)
             continue
-        
+
         player.items[item_choice]["quantity"] -= 1
 
         if item.type == "potion":
