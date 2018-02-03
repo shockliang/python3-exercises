@@ -1,6 +1,7 @@
 from classes.game import Person, bcolors
 from classes.magic import Spell
 from classes.Inventory import Item
+import random
 
 
 # Create black magic
@@ -51,10 +52,12 @@ while running:
     print("NAME                     HP                                      MP")
     for player in players:
         player.get_stats()
-        
+
     print("\n")
 
-    for player in players:        
+    enemy.get_enemy_stats()
+
+    for player in players:
         player.choose_action()
         choice = input("    Choose action:")
         index = int(choice) - 1
@@ -111,8 +114,13 @@ while running:
                 print(bcolors.OKGREEN + "\n" + item.name +
                       " heals for", str(item.prop), "HP" + bcolors.ENDC)
             elif item.type == "elixer":
-                player.hp = player.maxHp
-                player.mp = player.maxMp
+                if item.name == "MegaElixer":
+                    for i in players:
+                        i.hp = player.maxHp
+                        i.mp = player.maxMp
+                else:
+                    player.hp = player.maxHp
+                    player.mp = player.maxMp
                 print(bcolors.OKGREEN + "\n" + item.name +
                       " fully restores HP/MP" + bcolors.ENDC)
             elif item.type == "attack":
@@ -121,13 +129,10 @@ while running:
                       str(item.prop), "points damage" + bcolors.ENDC)
 
     enemy_choice = 1
+    target = random.randrange(0, len(players))
     enemy_dmg = enemy.generate_damage()
-    player1.take_damage(enemy_dmg)
+    players[target].take_damage(enemy_dmg)
     print("Enemy attacks for", enemy_dmg)
-
-    print("------------------------")
-    print("Enemy HP:", bcolors.FAIL + str(enemy.get_hp()) +
-          "/" + str(enemy.get_max_hp())+bcolors.ENDC + "\n")
 
     if enemy.get_hp() == 0:
         print(bcolors.OKGREEN + "You win!" + bcolors.ENDC)
