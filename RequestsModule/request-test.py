@@ -1,6 +1,8 @@
 import requests
 
-r = requests.get("https://google.com")
+
+params = {"q":"pizza"}
+r = requests.get("https://www.bing.com/search", params = params)
 print("status:", r.status_code)
 print(r.url)
 
